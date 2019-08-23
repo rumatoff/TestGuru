@@ -3,7 +3,7 @@ class CreateTests < ActiveRecord::Migration[6.0]
     create_table :tests do |t|
       t.string :title
       t.integer :level
-      t.references :category, foreign_key: { to_table: :categories }, index: true
+      t.references :category, foreign_key: true
 
       t.timestamps
     end
