@@ -1,6 +1,16 @@
 class Test < ApplicationRecord
-  def self.by_category(title)
-    join = 'INNER JOIN categories ON categories.id = category_id'
-    joins(join).where(categories: { title: title }).order(id: :desc).pluck(:title)
+
+  belongs_to :category
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  has_many :questions, dependent: :destroy
+  has_many :results, dependent: :nullify
+  has_many :users, through: :results
+
+  scope :by_category, lambda { |title|
+    joins(:category).where(categories: { title: title })
+                    .order(id: :desc)
+  }
+  def self.pretty_by_category(title)
+    by_category(title).pluck(:title)
   end
 end
