@@ -14,6 +14,10 @@ class Test < ApplicationRecord
   scope :middle, -> { where(level: 2..4) }
   scope :pro, -> { where(level: 5..Float::INFINITY) }
 
+  validates :title, presence: true
+  validates :title, uniqueness: { scope: :level }
+  validates :level, numericality: { only_integer: true, greater_than: 0 }
+
   def self.pretty_by_category(title)
     by_category(title).pluck(:title)
   end
