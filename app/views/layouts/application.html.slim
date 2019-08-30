@@ -7,9 +7,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body.text-center
-    .cover-container.d-flex.h-100.p-3.mx-auto.flex-column
-      = render 'layouts/header'
-      main.inner.cover role='main'
-        = yield
-      = render 'layouts/footer'
+  body
+    = render 'layouts/header'
+    = yield
+    = render 'layouts/footer'
