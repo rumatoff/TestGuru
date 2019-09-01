@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = @test.questions.build(body: params[:question][:body])
+    @question = @test.questions.build(question_params)
 
     if @question.save
       redirect_to test_questions_path(@test)
@@ -37,6 +37,10 @@ class QuestionsController < ApplicationController
   end
 
   private
+
+  def question_params
+    params.require(:question).permit(:body)
+  end
 
   def find_test
     @test = Test.find(params[:test_id])
