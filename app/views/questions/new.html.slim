@@ -3,9 +3,9 @@
     | New question:
   .lead
     - if @question.errors.any?
-      ul
-        - @question.errors.full_messages.each do |msg|
-          li = msg
+      - @question.errors.full_messages.each do |msg|
+        .alert.alert-danger role='alert'
+          = msg
     = form_for @question, url: test_questions_path(@test), html: { method: :post } do |f|
       .form-group
         = f.label      :body
