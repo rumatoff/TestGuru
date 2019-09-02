@@ -1,13 +1,4 @@
 .container
   h1.mt-5
     | Edit question:
-  .lead
-    - if @question.errors.any?
-      - @question.errors.full_messages.each do |msg|
-        .alert.alert-danger role='alert'
-          = msg
-    = form_for @question, url: question_path(@question), html: { method: :put } do |f|
-      .form-group
-        = f.label      :body
-        = f.text_field :body, class: 'form-control'
-      = f.submit 'Save', class: 'btn btn-primary'
+  = render 'layouts/question_form', locals: { path:  question_path(@question), method: :put }

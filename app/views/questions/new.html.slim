@@ -1,13 +1,4 @@
 .container
   h1.mt-5
     | New question:
-  .lead
-    - if @question.errors.any?
-      - @question.errors.full_messages.each do |msg|
-        .alert.alert-danger role='alert'
-          = msg
-    = form_for @question, url: test_questions_path(@test), html: { method: :post } do |f|
-      .form-group
-        = f.label      :body
-        = f.text_field :body, class: 'form-control'
-      = f.submit 'Create', class: 'btn btn-primary'
+  = render 'layouts/question_form', locals: { path:  test_questions_path(@test), method: :post}
