@@ -1,0 +1,14 @@
+doctype html
+html.h-100
+  head
+    title
+      | TestGuru
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body.d-flex.flex-column.h-100
+    = render 'layouts/header'
+    main.flex-shrink-0 role='main'
+      = yield
+    = render 'layouts/footer'
