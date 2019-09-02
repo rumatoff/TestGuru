@@ -1,4 +1,4 @@
 .container
   h1.mt-5
     | Edit question:
-  = render 'layouts/question_form', locals: { path:  question_path(@question), method: :put }
+  = render 'form', locals: { path:  question_path(@question), method: :put }
