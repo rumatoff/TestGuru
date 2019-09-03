@@ -1,0 +1,9 @@
+.container
+  .row
+    .col
+      h1.mt-5
+        = @category.title
+  .row
+    .col
+      = link_to 'Edit', edit_category_path(@category), class: 'btn btn-primary btn-lg'
+      = link_to 'Back', categories_path, class: 'btn btn-secondary btn-lg mx-2'

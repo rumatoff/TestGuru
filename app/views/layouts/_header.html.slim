@@ -1,11 +1,11 @@
 header
   nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-    a.navbar-brand href='#' TestGuru
+    = link_to 'TestGuru', root_path, class: 'navbar-brand'
     button.navbar-toggler type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation'
       span.navbar-toggler-icon
     .collapse.navbar-collapse id='navbar'
       ul.navbar-nav.mr-auto
         li.nav-item
-          a.nav-link.disabled href=''
-            | Tests
+          = link_to categories_path, class: 'nav-link'
+            | Categories
             span.sr-only

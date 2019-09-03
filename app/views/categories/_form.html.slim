@@ -1,0 +1,9 @@
+= render 'shared/errors', resource: @category
+.row
+  .col
+    = form_for @category, url: locals[:path], html: { method: locals[:method] } do |f|
+      .form-group
+        = f.label      :title
+        = f.text_field :title, class: 'form-control'
+      = f.submit 'Save', class: 'btn btn-primary btn-lg'
+      = link_to 'Back', locals[:path], class: 'btn btn-secondary btn-lg mx-2'
