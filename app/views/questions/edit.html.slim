@@ -1,4 +1,6 @@
 .container
-  h1.mt-5
-    | Edit question:
+  .row
+    .col
+      h1.mt-5
+        | Edit question:
   = render 'form', locals: { path:  question_path(@question), method: :put }

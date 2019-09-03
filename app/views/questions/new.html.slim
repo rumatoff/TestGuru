@@ -1,4 +1,6 @@
 .container
-  h1.mt-5
-    | New question:
+  .row
+    .col
+      h1.mt-5
+        | New question:
   = render 'form', locals: { path:  test_questions_path(@test), method: :post}

@@ -1,4 +1,6 @@
 - if resource.errors.any?
-  - resource.errors.full_messages.each do |msg|
-    .alert.alert-danger role='alert'
-      = msg
+  .row
+    .col
+      - resource.errors.full_messages.each do |msg|
+        .alert.alert-danger role='alert'
+          = msg
