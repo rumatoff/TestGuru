@@ -1,8 +1,14 @@
 footer.footer.mt-auto.py-3
   .container
-    span.text-muted
-      a href='http://thinknetica.com' target='_blank'
-        | Thinknetica
-      |  study project, by
-      a href='https://github.com/rumatoff/TestGuru' target='_blank'
-        |  rumatoff
+    .row
+      .col.text-left
+        span.text-muted
+          a href='http://thinknetica.com' target='_blank'
+            | Thinknetica
+          |  study project, by
+          a href='https://github.com/rumatoff/TestGuru' target='_blank'
+            |  rumatoff
+      .col.text-right
+        span.text-muted
+          == current_year
+          |  year
