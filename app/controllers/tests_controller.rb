@@ -7,9 +7,7 @@ class TestsController < ApplicationController
     @tests = Test.all
   end
 
-  def show
-    redirect_to test_questions_path(@test)
-  end
+  def show; end
 
   def new
     @test = Test.new
@@ -18,8 +16,7 @@ class TestsController < ApplicationController
   def edit; end
 
   def create
-    @test = Test.new(test_params)
-    @test.author_id = 1
+    @test = User.first.my_tests.new(test_params)
 
     if @test.save
       redirect_to tests_path

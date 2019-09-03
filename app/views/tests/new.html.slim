@@ -2,5 +2,5 @@
   .row
     .col
       h1.mt-5
-        = test_header
-  = render 'form', locals: { path:  tests_path, method: :post}
+        = test_header(@test)
+  = render 'form', path: tests_path, method: :post

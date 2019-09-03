@@ -2,5 +2,5 @@
   .row
     .col
       h1.mt-5
-        = category_header
-  = render 'form', locals: { path:  categories_path, method: :post}
+        = category_header(@category)
+  = render 'form', path:  categories_path, method: :post

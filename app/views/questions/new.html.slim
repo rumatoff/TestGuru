@@ -2,5 +2,5 @@
   .row
     .col
       h1.mt-5
-        = question_header
-  = render 'form', locals: { path:  test_questions_path(@test), method: :post}
+        = question_header(@question)
+  = render 'form', path:  test_questions_path(@test), method: :post

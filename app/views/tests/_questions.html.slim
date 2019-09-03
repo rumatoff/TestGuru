@@ -1,0 +1,8 @@
+- @test.questions.each do |question|
+  tr.d-flex
+    td.col-10
+      = link_to question.body, question
+    td.col-1.text-right
+      = link_to 'Edit', edit_question_path(question), class: 'btn btn-primary'
+    td.col-1.text-left
+      = button_to 'Delete', question_path(question, @test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
