@@ -2,5 +2,5 @@
   .row
     .col
       h1.mt-5
-        | Edit question:
+        = question_header
   = render 'form', locals: { path:  question_path(@question), method: :put }
