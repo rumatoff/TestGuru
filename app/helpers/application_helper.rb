@@ -1,5 +1,4 @@
 module ApplicationHelper
-  FORM_TITLE = { new: 'Create New', edit: 'Edit' }.freeze
 
   def current_year
     Time.current.year

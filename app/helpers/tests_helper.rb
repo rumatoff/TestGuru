@@ -3,9 +3,9 @@
 module TestsHelper
   def test_header(test)
     if test.persisted?
-      "#{ApplicationHelper::FORM_TITLE[:edit]} #{test.title} Test"
+      "Edit #{test.title} Test"
     else
-      "#{ApplicationHelper::FORM_TITLE[:new]} #{test.title} Test"
+      'Create New Test'
     end
   end
 
