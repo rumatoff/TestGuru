@@ -1,0 +1,12 @@
+= render 'shared/errors', resource: @test
+.row
+  .col
+    = form_with model: @test, url: path, method: method do |f|
+      .form-group
+        = f.label :title
+        = f.text_field :title, class: 'form-control'
+      .form-group
+        = f.label :category_id
+        = f.select :category_id, Category.all.collect { |c| [c.title, c.id] }, {}, class: 'custom-select'
+      = f.submit 'Save', class: 'btn btn-primary btn-lg'
+      = link_to 'Back', path, class: 'btn btn-secondary btn-lg mx-2'

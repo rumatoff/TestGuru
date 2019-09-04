@@ -1,0 +1,20 @@
+.container
+  .row
+    .col
+      h1.mt-5
+        | Listing categories
+  .row
+    .col
+      .table-responsive
+        table.table
+          tbody
+            tr.d-flex
+              td.col-10 style='border-top: 0px;'
+              td.col-1 style='border-top: 0px;'
+                = link_to 'Home', tests_path, class: 'btn btn-secondary'
+              td.col-1.text-right style='border-top: 0px;'
+                = button_to 'New', new_category_path, method: :get, class: 'btn btn-success'
+              - if @categories.present?
+                = render @categories
+              - else
+                p The categories not found.

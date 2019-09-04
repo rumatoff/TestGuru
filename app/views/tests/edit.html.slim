@@ -1,0 +1,6 @@
+.container
+  .row
+    .col
+      h1.mt-5
+        = test_header(@test)
+  = render 'form', path: test_path(@test), method: :put

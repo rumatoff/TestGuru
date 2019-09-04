@@ -1,13 +1,6 @@
 .container
-  h1.mt-5
-    | New question:
-  .lead
-    - if @question.errors.any?
-      ul
-        - @question.errors.full_messages.each do |msg|
-          li = msg
-    = form_for @question, url: test_questions_path(@test), html: { method: :post } do |f|
-      .form-group
-        = f.label      :body
-        = f.text_field :body, class: 'form-control'
-      = f.submit 'Create', class: 'btn btn-primary'
+  .row
+    .col
+      h1.mt-5
+        = question_header(@question)
+  = render 'form', path:  test_questions_path(@test), method: :post
