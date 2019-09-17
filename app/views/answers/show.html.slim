@@ -1,0 +1,9 @@
+.container
+  .row
+    .col
+      h1.mt-5
+        = @answer.body
+  .row
+    .col
+      = link_to 'Edit', edit_answer_path(@answer), class: 'btn btn-primary btn-lg'
+      = link_to 'Back', question_path(@answer.question), class: 'btn btn-secondary btn-lg mx-2'

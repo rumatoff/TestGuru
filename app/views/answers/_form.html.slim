@@ -1,0 +1,13 @@
+= render 'shared/errors', resource: @answer
+.row
+  .col
+    = form_with model: [@question, @answer], url: path, method: method do |f|
+      .form-group
+        = f.label      :body
+        = f.text_field :body, class: 'form-control'
+      .form-group.row
+        .col-12
+          = f.label :correct
+          = f.check_box :correct, id: :answer_correct ,class: 'form-control'
+      = f.submit 'Save', class: 'btn btn-primary btn-lg'
+      = link_to 'Back', path, class: 'btn btn-secondary btn-lg mx-2'

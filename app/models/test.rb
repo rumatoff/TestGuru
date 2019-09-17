@@ -3,8 +3,8 @@ class Test < ApplicationRecord
   belongs_to :category
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   has_many :questions, dependent: :destroy
-  has_many :results, dependent: :nullify
-  has_many :users, through: :results
+  has_many :test_passages, dependent: :nullify
+  has_many :users, through: :test_passages
 
   scope :by_category, lambda { |title|
     joins(:category).where(categories: { title: title })

@@ -5,5 +5,16 @@
         = @question.body
   .row
     .col
-      = link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary btn-lg'
-      = link_to 'Back', test_path(@question.test), class: 'btn btn-secondary btn-lg mx-2'
+      .table-responsive
+        table.table
+          tbody
+            tr.d-flex
+              td.col-10 style='border-top: 0px;'
+              td.col-1 style='border-top: 0px;'
+                = link_to 'Home', tests_path, class: 'btn btn-secondary'
+              td.col-1.text-right style='border-top: 0px;'
+                = button_to 'New', new_question_answer_path(@question), method: :get, class: 'btn btn-success'
+            - if @question.answers.present?
+              = render @question.answers
+            - else
+              p The question has no answers.
