@@ -36,13 +36,13 @@ answers = Answer.create!([
     { body: 'format c:', question_id: questions[1].id }
                          ])
 
-TestPassage.create!([
-                   { user_id: users[3].id, test_id: tests[0].id,  },
-                   { status: 'incompleted', user_id: users[1].id, test_id: tests[0].id },
-                   { status: 'completed', user_id: users[2].id, test_id: tests[1].id },
-                   { status: 'completed', user_id: users[3].id, test_id: tests[0].id },
-                   { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
-                   { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
-                   { status: 'completed', user_id: users[2].id, test_id: tests[3].id },
-                   { status: 'incompleted', user_id: users[0].id, test_id: tests[3].id }
-               ])
+# TestPassage.create!([
+#                    { user_id: users[3].id, test_id: tests[0].id,  },
+#                    { status: 'incompleted', user_id: users[1].id, test_id: tests[0].id },
+#                    { status: 'completed', user_id: users[2].id, test_id: tests[1].id },
+#                    { status: 'completed', user_id: users[3].id, test_id: tests[0].id },
+#                    { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
+#                    { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
+#                    { status: 'completed', user_id: users[2].id, test_id: tests[3].id },
+#                    { status: 'incompleted', user_id: users[0].id, test_id: tests[3].id }
+#                ])

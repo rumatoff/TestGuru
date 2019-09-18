@@ -1,0 +1,23 @@
+.container
+  .row
+    .col
+      h1.mt-5
+        = @test_passage.test.title
+        |  test result:
+  .row
+    .col
+      p.mt-5
+        - if @test_passage.passed?
+          span style='color: green'
+            | You passed the test &nbsp
+            = @test_passage.result_to_percent.to_i
+            | %, test passed successfully.
+        - else
+          span style='color: red'
+            | You passed the test &nbsp
+            = @test_passage.result_to_percent.to_i
+            | %, test failed.
+  .row
+    .col
+      .mt-5
+        = link_to 'Home', tests_path, class: 'btn btn-secondary'
