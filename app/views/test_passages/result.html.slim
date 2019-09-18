@@ -8,12 +8,12 @@
     .col
       p.mt-5
         - if @test_passage.passed?
-          span style='color: green'
+          span.test_passage.success
             | You passed the test &nbsp
             = @test_passage.result_to_percent.to_i
             | %, test passed successfully.
         - else
-          span style='color: red'
+          span.test_passage.fail
             | You passed the test &nbsp
             = @test_passage.result_to_percent.to_i
             | %, test failed.
