@@ -23,11 +23,11 @@ class TestPassage < ApplicationRecord
   end
 
   def question_number
-    self.test.questions.where('id < ?', current_question.id).count + 1
+    test.questions.where('id <= ?', current_question.id).count
   end
 
   def question_count
-    self.test.questions.count
+    test.questions.count
   end
 
   private
@@ -45,7 +45,7 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    if current_question.nil?
+    if current_question.new_record?
       test.questions.first
     else
       test.questions.order(:id).where('id > ?', current_question.id).first
