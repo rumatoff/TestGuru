@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
   root 'tests#index'
 
   resources :answers
@@ -19,4 +20,8 @@ Rails.application.routes.draw do
       get :result
     end
   end
+
+  resources :users, only: :create
+
+  get :signup, to: 'users#new'
 end

@@ -1,11 +1,8 @@
 header
-  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-    = link_to 'TestGuru', root_path, class: 'navbar-brand'
-    button.navbar-toggler type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation'
-      span.navbar-toggler-icon
-    .collapse.navbar-collapse id='navbar'
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          = link_to categories_path, class: 'nav-link'
-            | Categories
-            span.sr-only
+  .d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-dark.border-bottom.shadow-sm.navbar-dark
+    = link_to 'TestGuru', root_path, class: 'my-0 mr-md-auto font-weight-normal navbar-brand'
+    nav.my-2.my-md-0.mr-md-3.navbar-nav
+      = link_to categories_path, class: 'nav-link'
+        | Categories
+    = link_to signup_path, class: 'btn btn-secondary my-2 my-sm-0'
+      | Sign up
