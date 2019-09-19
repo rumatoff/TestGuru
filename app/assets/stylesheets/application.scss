@@ -29,3 +29,11 @@ main > .container {
 .btn {
   width: 75px;
 }
+
+.test_passage.success {
+  color: green;
+}
+
+.test_passage.fail {
+  color: red;
+}

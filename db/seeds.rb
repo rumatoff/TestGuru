@@ -22,16 +22,6 @@ tests = Test.create!([{ title: 'Ruby', level: 1, category_id: categories[0].id, 
                       { title: 'Rails', level: 3, category_id: categories[0].id, author_id: users[1].id },
                       { title: 'Python', level: 3, category_id: categories[2].id, author_id: users[2].id },
                       { title: 'Django', level: 5, category_id: categories[0].id, author_id: users[3].id }])
-Result.create!([
-                 { status: 'incompleted', user_id: users[3].id, test_id: tests[0].id },
-                 { status: 'incompleted', user_id: users[1].id, test_id: tests[0].id },
-                 { status: 'completed', user_id: users[2].id, test_id: tests[1].id },
-                 { status: 'completed', user_id: users[3].id, test_id: tests[0].id },
-                 { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
-                 { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
-                 { status: 'completed', user_id: users[2].id, test_id: tests[3].id },
-                 { status: 'incompleted', user_id: users[0].id, test_id: tests[3].id }
-               ])
 questions = Question.create!([
     { body: 'How will you define Ruby programming Language?', test_id: tests[0].id },
     { body: 'What is the command to get installed Ruby version in your system?', test_id: tests[0].id }
@@ -45,3 +35,14 @@ answers = Answer.create!([
     { body: 'Ruby –v', correct: true, question_id: questions[1].id },
     { body: 'format c:', question_id: questions[1].id }
                          ])
+
+# TestPassage.create!([
+#                    { user_id: users[3].id, test_id: tests[0].id,  },
+#                    { status: 'incompleted', user_id: users[1].id, test_id: tests[0].id },
+#                    { status: 'completed', user_id: users[2].id, test_id: tests[1].id },
+#                    { status: 'completed', user_id: users[3].id, test_id: tests[0].id },
+#                    { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
+#                    { status: 'completed', user_id: users[0].id, test_id: tests[2].id },
+#                    { status: 'completed', user_id: users[2].id, test_id: tests[3].id },
+#                    { status: 'incompleted', user_id: users[0].id, test_id: tests[3].id }
+#                ])
