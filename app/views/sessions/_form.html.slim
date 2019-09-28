@@ -1,7 +1,6 @@
 .row
   .col.mt-3
-    - if flash[:alert]
-      = content_tag :div, flash[:alert], class: 'alert alert-danger', role: 'alert'
+    = flash_message(flash[:alert], 'alert-danger')
     = form_with url: sessions_path, local: true do |f|
       .form-group
         = f.label :email
