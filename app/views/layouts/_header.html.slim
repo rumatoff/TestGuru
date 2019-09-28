@@ -4,7 +4,8 @@ header
     nav.my-2.my-md-0.mr-md-3.navbar-nav
       = link_to categories_path, class: 'nav-link my-0 mr-3'
         | Categories
-    = link_to signup_path, class: 'btn btn-secondary my-2 mr-3'
-      | Sign up
-    = link_to login_path, class: 'btn btn-secondary my-2 mr-3'
-      | Sign in
+    = unless logged_in?
+      = link_to signup_path, class: 'btn btn-secondary my-2 mr-3'
+        | Sign up
+      = link_to login_path, class: 'btn btn-secondary my-2 mr-3'
+        | Sign in
