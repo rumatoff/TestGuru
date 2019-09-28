@@ -9,9 +9,8 @@
         table.table
           tbody
             tr.d-flex
-              td.col-8 style='border-top: 0px;'
-              td.col-2 style='border-top: 0px;'
-              td.col-2.text-right style='border-top: 0px;'
+              td.col-11 style='border-top: 0px;'
+              td.col-1.text-right style='border-top: 0px;'
                 = button_to 'New', new_test_path, method: :get, class: 'btn btn-success'
             - if @tests.present?
               = render @tests
