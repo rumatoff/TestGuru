@@ -11,7 +11,7 @@ header
           strong 
             = current_user.email
           |  Guru
-      = link_to logout_path, class: 'btn btn-secondary my-2 mr-3 ml-3'
+      = link_to logout_path, method: :delete, class: 'btn btn-secondary my-2 mr-3 ml-3'
         | Logout
     - else
       = link_to signup_path, class: 'btn btn-secondary my-2 mr-3'
