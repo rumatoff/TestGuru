@@ -4,7 +4,16 @@ header
     nav.my-2.my-md-0.mr-md-3.navbar-nav
       = link_to categories_path, class: 'nav-link my-0 mr-3'
         | Categories
-    - unless logged_in?
+    - if logged_in?
+      nav
+        span.navbar-text
+          | Welcome, 
+          strong 
+            = current_user.email
+          |  Guru
+      = link_to logout_path, class: 'btn btn-secondary my-2 mr-3 ml-3'
+        | Logout
+    - else
       = link_to signup_path, class: 'btn btn-secondary my-2 mr-3'
         | Sign up
       = link_to login_path, class: 'btn btn-secondary my-2 mr-3'
