@@ -10,6 +10,7 @@ module User::Auth
     validates :password, confirmation: true
     validates :email, presence: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+    validates :email, uniqueness: true
   end
 
   def authenticate(password_string)
