@@ -1,4 +1,4 @@
-- if resource.errors.any?
+- if resource.present? && resource.errors.any?
   .row
     .col
       - resource.errors.full_messages.each do |msg|
