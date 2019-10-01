@@ -1,19 +1,15 @@
 .container
-  .row
+  .d-flex.flex-row-reverse
     .col
-      h1.mt-5
-        | Listing tests
-  .row
-    .col
-      .table-responsive
-        table.table
-          tbody
-            tr.d-flex
-              td.col-8 style='border-top: 0px;'
-              td.col-2 style='border-top: 0px;'
-              td.col-2.text-right style='border-top: 0px;'
-                = button_to 'New', new_test_path, method: :get, class: 'btn btn-success'
-            - if @tests.present?
-              = render @tests
-            - else
-              p No tests.
+      .row.justify-content-start
+        h1
+          | Listing tests
+  .d-flex.flex-row-reverse
+    .col-3
+      .row.justify-content-center
+        .text-right.mb-2
+          = button_to 'New', new_test_path, method: :get, class: 'btn btn-success'
+  - if @tests.present?
+    = render @tests
+  - else
+    p No tests.
