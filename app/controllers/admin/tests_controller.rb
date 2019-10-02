@@ -6,7 +6,7 @@ class Admin::TestsController < Admin::BaseController
 
   def index
     @tests = Test.all
-  end
+  end 
 
   def show; end
 
