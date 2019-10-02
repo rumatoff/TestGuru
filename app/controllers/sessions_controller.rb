@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to cookies.delete(:intended_url) || root_path
     else
-      flash[:alert] = 'Are you a Guru? Verify your email and password please'
+        flash[:alert] = 'Are you a Guru? Verify your email and password please'
       render :new
     end
   end

@@ -1,6 +1,5 @@
-.container
-  .row
-    .col
-      h1
-        = question_header(@question)
-  = render 'form', path:  test_questions_path(@test), method: :post
+.row
+  .col
+    h1
+      = question_header(@question)
+= render 'form', path:  test_questions_path(@test), method: :post

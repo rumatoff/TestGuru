@@ -1,6 +1,5 @@
-.container
-  .row
-    .col
-      h1
-        = test_header(@test)
-  = render 'form', path: tests_path, method: :post
+.row
+  .col
+    h1
+      = test_header(@test)
+= render 'form', path: tests_path, method: :post

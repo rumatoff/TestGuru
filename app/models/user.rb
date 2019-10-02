@@ -1,6 +1,13 @@
 class User < ApplicationRecord
 
-  include Auth
+  devise :database_authenticatable,
+         :registerable,
+         :confirmable,
+         :recoverable,
+         :rememberable,
+         :validatable
+
+  validates_presence_of :first_name, :last_name
 
   has_many :test_passages, dependent: :nullify
   has_many :tests, through: :test_passages

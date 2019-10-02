@@ -1,29 +1,28 @@
-.container
-  = render 'shared/errors', resource: @test_passage
-  .row
-    .col.text-left
-      h1
-        = @test_passage.test.title
-    .col.text-right
-      h3.mt-5
-        | Question &nbsp
-        = @test_passage.question_number
-        |  of &nbsp
-        = @test_passage.question_count
-  .row
-    .col.mt-5
-      h3
-        = @test_passage.current_question.body
-  .row
-    .col
-      = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
-        .table-responsive
-          table.table
-            tbody
-              = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|
-                tr.d-flex
-                  td style="border: 0px"
-                    = b.check_box id: "answer_ids_#{b.object.id}"
-                  td style="border: 0px"
-                    = b.label
-        = f.submit 'Next', class: 'btn btn-primary'
+= render 'shared/errors', resource: @test_passage
+.row
+  .col.text-left
+    h1
+      = @test_passage.test.title
+  .col.text-right
+    h3.mt-5
+      | Question &nbsp
+      = @test_passage.question_number
+      |  of &nbsp
+      = @test_passage.question_count
+.row
+  .col.mt-5
+    h3
+      = @test_passage.current_question.body
+.row
+  .col
+    = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
+      .table-responsive
+        table.table
+          tbody
+            = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|
+              tr.d-flex
+                td style="border: 0px"
+                  = b.check_box id: "answer_ids_#{b.object.id}"
+                td style="border: 0px"
+                  = b.label
+      = f.submit 'Next', class: 'btn btn-primary'
