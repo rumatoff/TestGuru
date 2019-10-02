@@ -1,0 +1,9 @@
+= render 'shared/errors', resource: @question
+.row
+  .col
+    = form_with model: [[:admin, @test], @question], url: path, method: method do |f|
+      .form-group
+        = f.label      :body
+        = f.text_field :body, class: 'form-control'
+      = f.submit 'Save', class: 'btn btn-primary btn-lg'
+      = link_to 'Back', path, class: 'btn btn-secondary btn-lg mx-2'

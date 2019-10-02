@@ -1,0 +1,14 @@
+.d-flex.flex-row-reverse
+  .col
+    .row.justify-content-start
+      h1
+        | Listing tests
+.d-flex.flex-row-reverse
+  .col-3
+    .row.justify-content-center
+      .text-right.mb-2
+        = button_to 'New', new_admin_test_path, method: :get, class: 'btn btn-success'
+- if @tests.present?
+  = render @tests
+- else
+  p No tests.

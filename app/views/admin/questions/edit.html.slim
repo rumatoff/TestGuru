@@ -1,0 +1,5 @@
+.row
+  .col
+    h1
+      = question_header(@question)
+= render 'form', path: admin_question_path(@question), method: :put
