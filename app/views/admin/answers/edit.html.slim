@@ -1,0 +1,10 @@
+.container
+  .row
+    .col
+      h1
+        = answer_header(@answer)
+  .row
+    .col
+      h3.mt-5
+        = @answer.question.body
+  = render 'form', path: admin_answer_path(@answer), method: :put

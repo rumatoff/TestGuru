@@ -1,0 +1,7 @@
+.row
+  .col
+    - flash.each do |key, message|
+      div class="alert alert-#{key}"
+        a.close href="#" data-dismiss="alert" 
+          | &#215;
+        = message

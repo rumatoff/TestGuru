@@ -1,0 +1,7 @@
+tr.d-flex
+  td.col-10
+    = link_to answer.body, admin_answer_path
+  td.col-1.text-right
+    = link_to 'Edit', edit_admin_answer_path(answer), class: 'btn btn-primary'
+  td.col-1.text-left
+    = button_to 'Delete', admin_answer_path(answer, @question), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

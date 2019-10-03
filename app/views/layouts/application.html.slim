@@ -11,5 +11,7 @@ html.h-100
   body.d-flex.flex-column.h-100
     = render 'layouts/header'
     main.flex-shrink-0.mb-5 role='main'
-      = yield
+      .container
+        = render 'shared/flash'
+        = yield
     = render 'layouts/footer'

@@ -1,16 +1,12 @@
 .d-flex.flex-row
   .col-7
-    = link_to test.title, test, class: 'align-baseline'
-    span.badge.badge-pill.badge-primary.ml-1.align-top
-      = number_of_questions(test)
+    .align-baseline
+      = test.title
   .col-2
     .row.justify-content-start
-      = link_to test.category.title, category_path(test.category.id), class: 'align-baseline'
+      .align-baseline
+        = test.category.title
   .col-3
     .row.justify-content-around.align-items-center.flex-wrap
       .text-right.mb-2
-        = link_to 'Start', start_test_path(test), method: :post, class: 'btn btn-info'
-      .text-right.mb-2
-        = link_to 'Edit', edit_test_path(test), class: 'btn btn-primary'
-      .text-right.mb-2
-        = button_to 'Delete', test_path(test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'    
+        = link_to 'Start', start_test_path(test), method: :post, class: 'btn btn-info'    
