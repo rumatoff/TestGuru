@@ -2,9 +2,10 @@
   .col
     .row.justify-content-start
       h1
-        | Listing tests
+        = t('.header')
 .d-flex.flex-row-reverse
 - if @tests.present?
   = render @tests
 - else
-  p No tests.
+  p
+    = t('.empty')

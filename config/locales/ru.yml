@@ -1,4 +1,13 @@
 ru:
+  links:
+    confirm: 'Вы уверены ?'
+    home: 'Домой'
+    new: 'Новый'
+    edit: 'Изменить'
+    delete: 'Удалить'
+    save: 'Сохранить'
+    back: 'Назад'
+    start: 'Старт'
   devise:
     confirmations:
       confirmed: "Ваша учётная запись успешно подтверждена."
@@ -240,6 +249,11 @@ ru:
         many: "%{model}: сохранение не удалось из-за %{count} ошибок"
         other: "%{model}: сохранение не удалось из-за %{count} ошибки"
   helpers:
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория'
     select:
       prompt: 'Выберите: '
     submit:
@@ -323,6 +337,9 @@ ru:
       last_word_connector: " и "
       two_words_connector: " и "
       words_connector: ", "
+    test:
+      create: 'Создать тест'
+      udate: 'Обновить тест'
   time:
     am: утра
     formats:
@@ -330,3 +347,24 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+  tests:
+    index:
+      header: 'Список тестов'
+      empty: 'Пока нет тестов.'
+    show: 
+      empty: 'У теста пока нет вопросов'
+  admin:
+    tests:
+      create:
+        success: 'Тест успешно создан.'
+      index:
+        header: 'Список тестов'
+        empty: 'Пока нет тестов.'
+      show:
+        empty: 'У теста пока нет вопросов'
+      new:
+        header: 'Создать тест'
+      edit:
+        header: 'Обновить тест'
+      destroy:
+        success: 'Тест успешно удален.'

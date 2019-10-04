@@ -30,4 +30,46 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  links:
+    confirm: 'Are you sure?'
+    home: 'Home'
+    new: 'New'
+    edit: 'Edit'
+    delete: 'Delete'
+    save: 'Save'
+    back: 'Back'
+    start: 'Start'
+  helpers:
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Save %{model}
+    test:
+      create: 'Create Test'
+      udate: 'Update Test'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+  tests:
+    index:
+      header: 'Listing tests'
+      empty: 'No tests.'
+    show:
+      empty: 'The test has no questions'
+  admin:
+    tests:
+      create:
+        success: 'Test was successfully created.'
+      index:
+        header: 'Listing tests'
+        empty: 'No tests.'
+      show:
+        empty: 'The test has no questions'
+      new:
+          header: 'Create test'
+      edit:
+        header: 'Update test'
+      destroy:
+        success: 'Test was successfully deleted.'
