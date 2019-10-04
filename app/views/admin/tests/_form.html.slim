@@ -7,6 +7,6 @@
         = f.text_field :title, class: 'form-control'
       .form-group
         = f.label :category_id
-        = f.select :category_id, Category.all.collect { |c| [c.title, c.id] }, {}, class: 'custom-select'
+        = f.select :category_id, Category.all.collect { |c| [c.title, c.id] }, { prompt: true }, class: 'custom-select'
       = f.submit t('links.save'), class: 'btn btn-primary btn-lg'
       = link_to t('links.back'), path, class: 'btn btn-secondary btn-lg mx-2'
