@@ -15,13 +15,11 @@
         = f.label :password
         - if @minimum_password_length
           em
-            | (
-            = @minimum_password_length
-            |  characters minimum)
+            = t('devise.shared.minimum_password_length', count: @minimum_password_length)
         = f.password_field :password, autocomplete: "new-password", class: 'form-control'
       .form-group
         = f.label :password_confirmation
         = f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control'
       .actions
-        = f.submit "Sign up", class: 'btn btn-primary mr-3'
+        = f.submit t('devise.registrations.new.sign_up'), class: 'btn btn-primary mr-3'
     = render "devise/shared/links"
