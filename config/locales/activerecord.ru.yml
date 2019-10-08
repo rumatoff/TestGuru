@@ -6,7 +6,14 @@ ru:
     attributes:
       test:
         title: 'Название'
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
         
     errors:
       messages:
         blank: 'не может быть пустым'
+        record_invalid: 'Возникли ошибки: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
