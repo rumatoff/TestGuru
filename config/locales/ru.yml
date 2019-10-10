@@ -298,3 +298,7 @@ ru:
         header: 'Обновить тест'
       destroy:
         success: 'Тест успешно удален.'
+  layouts:
+    header:
+      welcome: "Добро пожаловать "
+      appeal: "Гуру"

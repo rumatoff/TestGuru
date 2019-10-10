@@ -42,3 +42,7 @@ en:
         header: 'Update test'
       destroy:
         success: 'Test was successfully deleted.'
+  layouts:
+    header:
+      welcome: 'Welcome '
+      appeal: "Guru"
