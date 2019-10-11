@@ -48,5 +48,5 @@ en:
       appeal: "Guru"
   test_passages:
     gist:
-      success: ""
+      success: "Gist save."
       failure: "Gist save error"

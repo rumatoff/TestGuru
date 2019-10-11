@@ -32,6 +32,7 @@ gem 'jquery-rails'
 gem 'slim-rails'
 
 gem 'faraday'
+gem 'octokit', '~> 4.0'
 
 
 # Reduces boot times through caching; required in config/boot.rb
