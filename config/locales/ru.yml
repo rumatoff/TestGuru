@@ -302,3 +302,7 @@ ru:
     header:
       welcome: "Добро пожаловать "
       appeal: "Гуру"
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во врем сохранения gist произошла ошибка"

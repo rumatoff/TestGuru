@@ -46,3 +46,7 @@ en:
     header:
       welcome: 'Welcome '
       appeal: "Guru"
+  test_passages:
+    gist:
+      success: ""
+      failure: "Gist save error"
