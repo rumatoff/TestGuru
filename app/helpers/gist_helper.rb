@@ -1,10 +1,10 @@
 module GistHelper
 
   def gist_hash(gist)
-    URI.parse(gist.gist_url).path[1..-1]
+    gist.url.split('/').last
   end
 
   def gist_title(gist)
-    gist.question.body[0..24]
+    gist.question.body.truncate(25)
   end
 end
