@@ -1,7 +1,5 @@
 class GitHubOctokit
 
-  ACCESS_TOKEN = 'e39351600d9689d7967b8c16040fea349eb72d5e'.freeze
-
   def initialize
     @github = setup_github_client
   end
@@ -17,6 +15,6 @@ class GitHubOctokit
   private
 
   def setup_github_client
-    Octokit::Client.new(access_token: ACCESS_TOKEN)
+    Octokit::Client.new(access_token: ENV['GITHUB_TOKEN'])
   end
 end
