@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :test_passages, dependent: :nullify
   has_many :tests, through: :test_passages
   has_many :my_tests, foreign_key: 'author_id', class_name: 'Test'
+  has_many :gists, dependent: :destroy
 
   validates_presence_of :first_name, :last_name
 

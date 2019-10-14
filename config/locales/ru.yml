@@ -298,6 +298,10 @@ ru:
         header: 'Обновить тест'
       destroy:
         success: 'Тест успешно удален.'
+    gists:
+      index:
+        header: "Список Gists"
+        empty: "Пусто"
   layouts:
     header:
       welcome: "Добро пожаловать "

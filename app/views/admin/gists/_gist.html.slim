@@ -1,0 +1,11 @@
+.d-flex.flex-row
+  .col-4
+    .row
+      = link_to gist_title(gist), admin_question_path(gist)
+  .col-7
+    .row
+      = link_to gist_hash(gist), gist.gist_url, target: '__blank'
+  .col-1
+    .row
+      = gist.user.email
+      
