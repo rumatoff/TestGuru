@@ -42,7 +42,15 @@ en:
         header: 'Update test'
       destroy:
         success: 'Test was successfully deleted.'
+    gists:
+      index:
+        header: "Gists list"
+        empty: "Gists list empty"
   layouts:
     header:
       welcome: 'Welcome '
       appeal: "Guru"
+  test_passages:
+    gist:
+      success: "Gist save."
+      failure: "Gist save error"

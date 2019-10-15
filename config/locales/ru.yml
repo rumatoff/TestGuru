@@ -298,7 +298,15 @@ ru:
         header: 'Обновить тест'
       destroy:
         success: 'Тест успешно удален.'
+    gists:
+      index:
+        header: "Список Gists"
+        empty: "Пусто"
   layouts:
     header:
       welcome: "Добро пожаловать "
       appeal: "Гуру"
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во врем сохранения gist произошла ошибка"

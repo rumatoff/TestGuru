@@ -8,15 +8,17 @@ Rails.application.routes.draw do
     post :start, on: :member
   end
 
-  resources :categories
-
   resources :test_passages, only: %i[show update] do
     member do
       get :result
+      post :gist
     end
   end
 
+  resources :categories
+
   namespace :admin do
+    resources :gists, only: :index
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index

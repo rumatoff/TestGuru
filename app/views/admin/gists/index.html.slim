@@ -1,0 +1,10 @@
+.d-flex.flex-row-reverse
+  .col
+    .row.justify-content-start
+      h1
+        = t('.header')
+- if @gists.present?
+  = render @gists
+- else
+  p
+    = t('.empty')
