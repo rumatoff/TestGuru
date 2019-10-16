@@ -3,9 +3,20 @@
     .row.justify-content-start
       h1
         = t('.header')
-.d-flex.flex-row-reverse
-- if @tests.present?
-  = render @tests
-- else
-  p
-    = t('.empty')
+table.table.table-hover
+  thead.thead-dark
+    th.border-top-0.sort-by-title.pointer scope="col"
+      | Title
+      = octicon 'arrow-up', class: 'text-success hide'
+      = octicon 'arrow-down', class: 'text-success hide'
+    th.border-top-0 scope="col"
+      | Category
+    th.border-top-0.text-center scope="col" colspan='2'
+      | Action
+  tbody
+    tr
+    - if @tests.present?
+      = render @tests
+    - else
+      p
+        = t('.empty')
