@@ -35,6 +35,7 @@ gem 'faraday'
 gem 'octokit', '~> 4.0'
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'octicons_helper'
 
 
 # Reduces boot times through caching; required in config/boot.rb
