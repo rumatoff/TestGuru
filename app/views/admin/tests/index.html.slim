@@ -3,13 +3,22 @@
     .row.justify-content-start
       h1
         = t('.header')
-.d-flex.flex-row-reverse
-  .col-3
-    .row.justify-content-center
-      .text-right.mb-2
-        = button_to t('links.new'), new_admin_test_path, method: :get, class: 'btn btn-success'
-- if @tests.present?
-  = render @tests
-- else
-  p
-    = t('.empty')
+table.table.table-hover
+  thead.thead-dark
+    th.border-top-0.sort-by-title.pointer scope="col"
+      | Title
+      = octicon 'arrow-up', class: 'text-success hide'
+      = octicon 'arrow-down', class: 'text-success hide'
+    th.border-top-0 scope="col"
+      | Category
+    th.border-top-0.text-center scope="col" colspan='2'
+      | Action
+  tbody
+    tr
+      td colspan='4'
+        = link_to t('links.new'), new_admin_test_path, method: :get, class: 'btn btn-success float-right'
+    - if @tests.present?
+      = render @tests
+    - else
+      p
+        = t('.empty')
