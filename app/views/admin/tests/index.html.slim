@@ -3,6 +3,7 @@
     .row.justify-content-start
       h1
         = t('.header')
+= render 'shared/errors', resource: @test
 table.table.table-hover
   thead.thead-dark
     th.border-top-0.sort-by-title.pointer scope="col"

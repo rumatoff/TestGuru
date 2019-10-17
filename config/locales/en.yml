@@ -42,6 +42,8 @@ en:
         header: 'Update test'
       destroy:
         success: 'Test was successfully deleted.'
+      form_inline:
+        submit: "Save"
     gists:
       index:
         header: "Gists list"

@@ -2,5 +2,6 @@
   .row
     .col
       - resource.errors.full_messages.each do |msg|
-        .alert.alert-danger role='alert'
-          = msg
+        = content_tag :div, class: 'resources-errors', data: { resource_id: resource.id } do  
+          .alert.alert-danger role='alert'
+            = msg

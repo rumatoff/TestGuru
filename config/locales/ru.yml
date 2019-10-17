@@ -298,6 +298,8 @@ ru:
         header: 'Обновить тест'
       destroy:
         success: 'Тест успешно удален.'
+      form_inline:
+        submit: "Сохранить"
     gists:
       index:
         header: "Список Gists"
