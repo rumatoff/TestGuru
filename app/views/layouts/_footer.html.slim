@@ -3,11 +3,7 @@ footer.footer.mt-auto.py-3
     .row
       .col.text-left
         span.text-muted
-          a href='http://thinknetica.com' target='_blank'
-            | Thinknetica
-          |  study project, by &nbsp
-          = github_url_by('rumatoff', 'TestGuru')
+          = t('.footer_text', href: link_to('Thinknetica', 'http://thinknetica.com', {target: '_blank'})).html_safe
       .col.text-right
         span.text-muted
-          = current_year
-          |  year
+          | &copy; #{github_url_by('rumatoff', 'TestGuru')}, #{current_year}          

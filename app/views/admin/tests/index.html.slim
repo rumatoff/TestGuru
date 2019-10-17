@@ -7,13 +7,13 @@
 table.table.table-hover
   thead.thead-dark
     th.border-top-0.sort-by-title.pointer scope="col"
-      | Title
+      = t('activerecord.attributes.test.title')
       = octicon 'arrow-up', class: 'text-success hide'
       = octicon 'arrow-down', class: 'text-success hide'
     th.border-top-0 scope="col"
-      | Category
+      = t('activerecord.models.category')
     th.border-top-0.text-center scope="col" colspan='2'
-      | Action
+      = t('tests.index.action')
   tbody
     tr
       td colspan='4'

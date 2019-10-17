@@ -2,6 +2,7 @@ en:
   activerecord:
     models:
       test: 'Test'
+      category: ""
 
     attributes:
       test:

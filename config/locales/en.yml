@@ -25,6 +25,7 @@ en:
     index:
       header: 'Listing tests'
       empty: 'No tests.'
+      action: "Action"
     show:
       empty: 'The test has no questions'
   admin:
@@ -52,7 +53,14 @@ en:
     header:
       welcome: 'Welcome '
       appeal: "Guru"
+      logout: "Logout"
+      admins: "Admins"
+    footer:
+      footer_text: "%{href} study project"
   test_passages:
     gist:
       success: "Gist save."
       failure: "Gist save error"
+  datetime:
+    prompts:
+      year: "year"

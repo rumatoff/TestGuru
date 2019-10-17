@@ -4,7 +4,7 @@ header
       = link_to 'TestGuru', root_path, class: 'my-0 mr-md-auto font-weight-normal navbar-brand'
       - if current_user.admin?
         .nav.my-2.my-md-0.mr-md-3.navbar-nav
-          = link_to 'Admins', admin_tests_path, class: 'nav-link my-0 mr-3'
+          = link_to t('.admins'), admin_tests_path, class: 'nav-link my-0 mr-3'
         .nav.my-2.my-md-0.mr-md-3.navbar-nav
           = link_to 'Gists', admin_gists_path, class: 'nav-link my-0 mr-3'
       nav
@@ -14,9 +14,9 @@ header
             = current_user.email
             | &nbsp;
           = t('.appeal')
-        = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-secondary my-2 mr-3 ml-3'
+        = link_to t('.logout'), destroy_user_session_path, method: :delete, class: 'btn btn-secondary my-2 mr-3 ml-3'
     - else
       .my-0.mr-md-auto.font-weight-normal.navbar-brand
         span TestGuru
-      = link_to 'Sign up', new_user_registration_path, class: 'btn btn-secondary my-2 mr-3'
-      = link_to 'Sign in', new_user_session_path, class: 'btn btn-secondary my-2 mr-3'
+      = link_to t('devise.registrations.new.sign_up'), new_user_registration_path, class: 'btn btn-secondary my-2 mr-3'
+      = link_to t('devise.sessions.new.sign_in'), new_user_session_path, class: 'btn btn-secondary my-2 mr-3'
