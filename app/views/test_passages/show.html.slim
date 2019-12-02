@@ -10,6 +10,9 @@
       |  of &nbsp
       = @test_passage.question_count
 .row
+  .col.text-center
+    progress value="#{@test_passage.question_number}" max="#{@test_passage.question_count}"
+.row
   .col.mt-5
     h3
       = @test_passage.current_question.body

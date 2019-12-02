@@ -47,3 +47,8 @@ main > .container {
 .alert-alert {
   @extend .alert-danger;
 }
+
+progress {
+  width: 50%;
+  height: 20px;
+}
