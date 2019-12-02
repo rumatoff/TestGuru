@@ -16,6 +16,7 @@
   .col.mt-5
     h3
       = @test_passage.current_question.body
+      
 .row
   .col
     = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|

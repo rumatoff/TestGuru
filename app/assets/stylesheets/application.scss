@@ -51,4 +51,7 @@ main > .container {
 progress {
   width: 50%;
   height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
