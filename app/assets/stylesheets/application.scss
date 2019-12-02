@@ -48,8 +48,8 @@ main > .container {
   @extend .alert-danger;
 }
 
-progress {
-  width: 50%;
+.progress {
+  background-color: blue;
   height: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
