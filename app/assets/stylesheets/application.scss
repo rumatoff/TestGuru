@@ -47,3 +47,11 @@ main > .container {
 .alert-alert {
   @extend .alert-danger;
 }
+
+.progress {
+  background-color: blue;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

@@ -281,6 +281,7 @@ ru:
     index:
       header: 'Список тестов'
       empty: 'Пока нет тестов.'
+      action: 'Действие'
     show: 
       empty: 'У теста пока нет вопросов'
   admin:
@@ -298,6 +299,8 @@ ru:
         header: 'Обновить тест'
       destroy:
         success: 'Тест успешно удален.'
+      form_inline:
+        submit: "Сохранить"
     gists:
       index:
         header: "Список Gists"
@@ -306,6 +309,10 @@ ru:
     header:
       welcome: "Добро пожаловать "
       appeal: "Гуру"
+      logout: "Выйти"
+      admins: "Админка"
+    footer:
+      footer_text: "Учебный проект %{href}"
   test_passages:
     gist:
       success: "Gist успешно сохранен!"

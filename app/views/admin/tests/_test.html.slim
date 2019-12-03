@@ -1,11 +1,12 @@
 tr
   td.w-50
-    = link_to test.title, admin_test_path(test), class: 'align-baseline'
-    span.badge.badge-pill.badge-primary.ml-1.align-top
+    = link_to test.title, admin_test_path(test), data: { test_id: test.id }, class: 'align-baseline test-title'
+    span class='badge badge-pill badge-primary ml-1 align-top' data-test-id=test.id
       = number_of_questions(test)
+    = render 'form_inline', test: test == @test ? @test : test
   td.w-30
     = link_to test.category.title, category_path(test.category.id), class: 'align-baseline'
   td.w-10
-    = link_to t('links.edit'), edit_admin_test_path(test), class: 'btn btn-primary float-right'
+    = link_to t('links.edit'), edit_admin_test_path(test), data: { test_id: test.id }, class: 'form-inline-link btn btn-primary float-right'
   td.w-10
     = button_to t('links.delete'), admin_test_path(test), method: :delete, data: { confirm: t('links.confirm') }, class: 'btn btn-danger float-right'
