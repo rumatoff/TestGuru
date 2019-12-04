@@ -1,0 +1,14 @@
+.row
+  .col
+    = form_with model: @feedback, url: feedback_index_path, method: :post do |f|
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: 'form-control'
+      .form-group
+        = f.label :message
+        = f.text_field :message, class: 'form-control'
+      = f.submit t('links.send'), class: 'btn btn-primary btn-lg'
+      
