@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories
+  resources :feedback, only: %i[index new create], path: :feedback
 
   namespace :admin do
     resources :gists, only: :index

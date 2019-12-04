@@ -3,6 +3,7 @@ ru:
     models:
       test: 'Тест'
       category: 'Категория'
+      feedback: 'Обратная связь'
     
     attributes:
       test:
@@ -10,7 +11,10 @@ ru:
       user:
         first_name: 'Имя'
         last_name: 'Фамилия'
-        
+      feedback:
+        name: 'Имя'
+        email: 'Email'
+        message: 'Сообщение'
     errors:
       messages:
         blank: 'не может быть пустым'

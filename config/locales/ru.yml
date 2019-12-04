@@ -8,6 +8,7 @@ ru:
     save: 'Сохранить'
     back: 'Назад'
     start: 'Старт'
+    send: 'Отправить'
     
   date:
     abbr_day_names:
@@ -313,6 +314,7 @@ ru:
       admins: "Админка"
     footer:
       footer_text: "Учебный проект %{href}"
+      feedback: "Обратная связь"
   test_passages:
     gist:
       success: "Gist успешно сохранен!"
