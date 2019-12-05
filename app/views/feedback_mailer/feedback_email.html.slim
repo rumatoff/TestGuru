@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Feedback message
+    meta charset="UTF-8'" content="text/html"
+  body
+    span
+      | From: 
+      = @feedback.name
+    br
+    span
+      | email: 
+      = @feedback.email
+    br
+    span
+      | Message: 
+      = @feedback.message
