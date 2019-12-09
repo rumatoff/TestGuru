@@ -8,6 +8,7 @@ ru:
     attributes:
       test:
         title: 'Название'
+        level: 'Уровень'
       user:
         first_name: 'Имя'
         last_name: 'Фамилия'
