@@ -4,7 +4,9 @@ ru:
       test: 'Тест'
       category: 'Категория'
       feedback: 'Обратная связь'
-    
+      question: "Вопрос"
+      answer: "Ответ"
+
     attributes:
       test:
         title: 'Название'

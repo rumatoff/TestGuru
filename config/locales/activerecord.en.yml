@@ -4,6 +4,8 @@ en:
       test: 'Test'
       category: 'Category'
       feedback: 'Feedback'
+      question: "Question"
+      answer: "Answer"
 
     attributes:
       test:
