@@ -2,6 +2,12 @@
   .col
     h1
       = @test.title
+  .col
+    h4
+      | #{t('activerecord.models.category')}: #{@test.category.title}
+  .col
+    h4
+      | #{t('activerecord.attributes.test.level')}: #{@test.level}
 .row
   .col
     .table-responsive
