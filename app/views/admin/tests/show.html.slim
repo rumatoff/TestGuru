@@ -8,6 +8,8 @@
   .col
     h4
       | #{t('activerecord.attributes.test.level')}: #{@test.level}
+  .col
+    = link_to t('links.edit'), edit_admin_test_url, class: 'btn btn-primary'
 .row
   .col
     .table-responsive
