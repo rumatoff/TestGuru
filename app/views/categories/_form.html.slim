@@ -1,7 +1,7 @@
 = render 'shared/errors', resource: @category
 .row
   .col
-    = form_with model: @category, url: path, method: method do |f|
+    = form_with model: @category, local: true, url: path, method: method do |f|
       .form-group
         = f.label      :title
         = f.text_field :title, class: 'form-control'

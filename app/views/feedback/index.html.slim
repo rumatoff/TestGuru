@@ -1,6 +1,6 @@
 .row
   .col
-    = form_with model: @feedback, url: feedback_index_path, method: :post do |f|
+    = form_with model: @feedback, local: true, url: feedback_index_path, method: :post do |f|
       .form-group
         = f.label :name
         = f.text_field :name, class: 'form-control'
