@@ -1,3 +1,4 @@
+= render 'shared/errors', resource: @feedback
 .row
   .col
     = form_with model: @feedback, local: true, url: feedback_index_path, method: :post do |f|

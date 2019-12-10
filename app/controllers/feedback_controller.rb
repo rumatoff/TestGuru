@@ -1,20 +1,20 @@
 class FeedbackController < ApplicationController
+  respond_to :html
 
-  def index
+  skip_before_action :authenticate_user!
+
+  def new
     @feedback = Feedback.new
   end
-
-  def new; end
 
   def create
     @feedback = Feedback.new(feedback_params)
 
-    if @feedback.save
+    if @feedback.valid?
       FeedbackMailer.with(feedback: @feedback).feedback_email.deliver_now
-      redirect_to root_path, notice: 'Форма успешно отправленна'
+      redirect_to new_feedback_path, notice: 'Форма успешно отправленна'
     else
-      flash[:error] = @feedback.errors.full_messages
-      render 'index'
+      render :new
     end
   end
 
