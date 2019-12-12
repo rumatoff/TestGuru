@@ -4,7 +4,9 @@ tr
     span class='badge badge-pill badge-primary ml-1 align-top' data-test-id=test.id
       = number_of_questions(test)
     = render 'form_inline', test: test == @test ? @test : test
-  td.w-30
+  td.w-15
+    = test.level
+  td.w-15
     = link_to test.category.title, category_path(test.category.id), class: 'align-baseline'
   td.w-10
     = link_to t('links.edit'), edit_admin_test_path(test), data: { test_id: test.id }, class: 'form-inline-link btn btn-primary float-right'

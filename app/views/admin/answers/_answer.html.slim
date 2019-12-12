@@ -1,7 +1,7 @@
-tr.d-flex
-  td.col-10
+tr
+  td style="width: 70%"
     = link_to answer.body, admin_answer_path
-  td.col-1.text-right
-    = link_to 'Edit', edit_admin_answer_path(answer), class: 'btn btn-primary'
-  td.col-1.text-left
-    = button_to 'Delete', admin_answer_path(answer, @question), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+  td style="width: 15%"
+    = link_to t('links.edit'), edit_admin_answer_path(answer), class: 'btn btn-primary float-right'
+  td style="width: 15%"
+    = button_to t('links.delete'), admin_answer_path(answer, @question), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

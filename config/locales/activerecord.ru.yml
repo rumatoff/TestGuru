@@ -3,14 +3,21 @@ ru:
     models:
       test: 'Тест'
       category: 'Категория'
-    
+      feedback: 'Обратная связь'
+      question: "Вопрос"
+      answer: "Ответ"
+
     attributes:
       test:
         title: 'Название'
+        level: 'Уровень'
       user:
         first_name: 'Имя'
         last_name: 'Фамилия'
-        
+      feedback:
+        name: 'Имя'
+        email: 'Email'
+        message: 'Сообщение'
     errors:
       messages:
         blank: 'не может быть пустым'

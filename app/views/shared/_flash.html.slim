@@ -4,4 +4,4 @@
       div class="alert alert-#{key}"
         a.close href="#" data-dismiss="alert" 
           | &#215;
-        = message.html_safe
+        = sanitize(message)

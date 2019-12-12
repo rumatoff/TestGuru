@@ -8,6 +8,7 @@ en:
     save: 'Save'
     back: 'Back'
     start: 'Start'
+    send: 'Send'
   helpers:
     submit:
       create: Create %{model}
@@ -57,6 +58,7 @@ en:
       admins: "Admins"
     footer:
       footer_text: "%{href} study project"
+      feedback: "Feedback us"
   test_passages:
     gist:
       success: "Gist save."

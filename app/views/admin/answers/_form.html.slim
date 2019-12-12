@@ -1,7 +1,7 @@
 = render 'shared/errors', resource: @answer
 .row
   .col
-    = form_with model: [:admin, @question, @answer], url: path, method: method do |f|
+    = form_with model: [:admin, @question, @answer], local: true, url: path, method: method do |f|
       .form-group
         = f.label      :body
         = f.text_field :body, class: 'form-control'
@@ -10,4 +10,4 @@
           = f.label :correct
           = f.check_box :correct, id: :answer_correct ,class: 'form-control'
       = f.submit 'Save', class: 'btn btn-primary btn-lg'
-      = link_to 'Back', path, class: 'btn btn-secondary btn-lg mx-2'
+      = link_to 'Back',  admin_question_url(@question), class: 'btn btn-secondary btn-lg mx-2'

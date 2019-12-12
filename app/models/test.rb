@@ -18,7 +18,6 @@ class Test < ApplicationRecord
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
-  validates :questions, presence: true
 
   def self.pretty_by_category(title)
     by_category(title).pluck(:title)
