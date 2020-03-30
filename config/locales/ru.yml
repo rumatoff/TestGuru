@@ -319,3 +319,7 @@ ru:
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во врем сохранения gist произошла ошибка"
+  users:
+    sessions:
+      create:
+        hello: "Привет"

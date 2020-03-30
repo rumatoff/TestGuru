@@ -66,3 +66,7 @@ en:
   datetime:
     prompts:
       year: "year"
+  users:
+    sessions:
+      create:
+        hello: "Hi"
