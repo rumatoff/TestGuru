@@ -8,6 +8,11 @@ header
             = link_to t('.admins'), admin_tests_path, class: 'nav-link my-0 mr-3'
           nav.my-2.my-md-0.mr-md-3.navbar-nav
             = link_to 'Gists', admin_gists_path, class: 'nav-link my-0 mr-3'
+          nav.my-2.my-md-0.mr-md-3.navbar-nav
+            = link_to 'Badges', admin_badges_path, class: 'nav-link my-0 mr-3'
+        - else
+          nav.my-2.my-md-0.mr-md-3.navbar-nav
+            = link_to 'Badges', badges_path, class: 'nav-link my-0 mr-3'
         nav.col-lg-6.text-center
           span.navbar-text
             = t('.welcome')
