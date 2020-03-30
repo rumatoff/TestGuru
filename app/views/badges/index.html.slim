@@ -1,0 +1,19 @@
+h1 Listing badges
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @badges.each do |badge|
+      tr
+        td = link_to 'Show', badge
+        td = link_to 'Edit', edit_badge_path(badge)
+        td = link_to 'Destroy', badge, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Badge', new_badge_path
