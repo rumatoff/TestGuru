@@ -18,6 +18,9 @@ ru:
         name: 'Имя'
         email: 'Email'
         message: 'Сообщение'
+      badge:
+        name: "Название"
+        badge_img: "Имя файла изображения"
     errors:
       messages:
         blank: 'не может быть пустым'

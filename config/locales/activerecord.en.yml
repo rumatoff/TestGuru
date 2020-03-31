@@ -18,6 +18,9 @@ en:
         name: 'Name'
         email: 'Email'
         message: 'Message'
+      badge:
+        name: "Name"
+        badge_img: ""
     errors:
       messages:
         blank: 'cant be blank'

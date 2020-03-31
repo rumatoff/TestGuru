@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :badges
   root 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }, controllers: { sessions: 'users/sessions' }
@@ -18,6 +17,8 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :feedback, only: %i[new create]
+
+  resources :badges
 
   namespace :admin do
     resources :gists, only: :index

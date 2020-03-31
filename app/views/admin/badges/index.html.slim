@@ -1,0 +1,22 @@
+.d-flex.flex-row-reverse
+  .col
+    .row.justify-content-start
+      h1
+        = t('badge.header')
+= render 'shared/errors', resource: @badge
+table.table.table-hover
+  thead.thead-dark
+    th.border-top-0.sort-by-title.pointer scope="col"
+      = t('activerecord.attributes.badge.name')
+    th.border-top-0 scope="col"
+    th.border-top-0.text-center scope="col" colspan='2'
+      = t('action')
+  tbody
+    tr
+      td colspan='4'
+        = link_to t('links.new'), new_admin_badge_path, method: :get, class: 'btn btn-success float-right'
+    - if @badges.present?
+      = render @badges
+    - else
+      p
+        = t('empty')

@@ -50,6 +50,15 @@ en:
       index:
         header: "Gists list"
         empty: "Gists list empty"
+    badges:
+      edit:
+        header: "Edit badge"
+      destroy:
+        success: "Badge successfully deleted"
+      create:
+        success: "Badge was successfully saved"
+      new:
+        header: "New badge"
   layouts:
     header:
       welcome: 'Welcome '
@@ -70,3 +79,9 @@ en:
     sessions:
       create:
         hello: "Hi"
+  badge:
+    header: "Badges list"
+    terms: "Terms of receipt"
+    img: "Image"
+  action: "Action"
+  empty: "Empty"

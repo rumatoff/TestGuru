@@ -306,6 +306,15 @@ ru:
       index:
         header: "Список Gists"
         empty: "Пусто"
+    badges:
+      edit:
+        header: "Изменить бейдж"
+      destroy:
+        success: "Бейдж удален"
+      create:
+        success: "Бейдж успешно сохранен"
+      new:
+        header: "Создать бейдж"
   layouts:
     header:
       welcome: "Добро пожаловать "
@@ -323,3 +332,9 @@ ru:
     sessions:
       create:
         hello: "Привет"
+  badge:
+    header: "Список бейджев"
+    terms: "Условия получения"
+    img: "Изображение"
+  action: "Действие"
+  empty: "Пусто"
