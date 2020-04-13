@@ -6,6 +6,7 @@ ru:
       feedback: 'Обратная связь'
       question: "Вопрос"
       answer: "Ответ"
+      badge: "Бейдж"
 
     attributes:
       test:
@@ -21,6 +22,8 @@ ru:
       badge:
         name: "Название"
         badge_img: "Имя файла изображения"
+        rule: "Правило"
+        condition: "Условие"
     errors:
       messages:
         blank: 'не может быть пустым'

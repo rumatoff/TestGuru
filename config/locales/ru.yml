@@ -340,6 +340,10 @@ ru:
     terms: "Условия получения"
     img: "Изображение"
     my_header: "Мои бейджи"
+    rules:
+      all_in_category: "Все в категории"
+      first_try_success: "С первой попытки"
+      all_in_level: "Все конкретного уровня"
   action: "Действие"
   empty: "Пусто"
   img: "Изображение"

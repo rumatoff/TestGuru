@@ -87,6 +87,10 @@ en:
     terms: "Terms of receipt"
     img: "Image"
     my_header: "My badges"
+    rules:
+      all_in_category: "All in category"
+      first_try_success: "First try success"
+      all_in_level: "All in level"
   action: "Action"
   empty: "Empty"
   img: "Image"

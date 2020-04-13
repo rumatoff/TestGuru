@@ -10,6 +10,7 @@ class Test < ApplicationRecord
     joins(:category).where(categories: { title: title })
                     .order(id: :desc)
   }
+  scope :by_level, ->(level) { where(level: level).order(:id) }
   scope :easy, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }
   scope :pro, -> { where(level: 5..Float::INFINITY) }
@@ -21,5 +22,13 @@ class Test < ApplicationRecord
 
   def self.pretty_by_category(title)
     by_category(title).pluck(:title)
+  end
+
+  def self.all_by_category(category_name)
+    by_category(category_name)
+  end
+
+  def self.all_by_level(level)
+    by_level(level.to_i)
   end
 end

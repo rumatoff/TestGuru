@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_30_124651) do
+ActiveRecord::Schema.define(version: 2020_04_13_130318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,12 +29,8 @@ ActiveRecord::Schema.define(version: 2020_03_30_124651) do
     t.string "badge_img", default: "/img/badge_default.png"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "badges_users", id: false, force: :cascade do |t|
-    t.bigint "badge_id", null: false
-    t.bigint "user_id", null: false
-    t.index ["badge_id", "user_id"], name: "index_badges_users_on_badge_id_and_user_id"
+    t.string "rule"
+    t.string "condition"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -86,6 +82,13 @@ ActiveRecord::Schema.define(version: 2020_03_30_124651) do
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true
   end
 
+  create_table "user_badges", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "badge_id", null: false
+    t.index ["badge_id"], name: "index_user_badges_on_badge_id"
+    t.index ["user_id"], name: "index_user_badges_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
@@ -114,4 +117,6 @@ ActiveRecord::Schema.define(version: 2020_03_30_124651) do
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
   add_foreign_key "tests", "users", column: "author_id"
+  add_foreign_key "user_badges", "badges"
+  add_foreign_key "user_badges", "users"
 end

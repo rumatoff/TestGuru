@@ -6,6 +6,7 @@ en:
       feedback: 'Feedback'
       question: "Question"
       answer: "Answer"
+      badge: 'Badge'
 
     attributes:
       test:
@@ -20,7 +21,9 @@ en:
         message: 'Message'
       badge:
         name: "Name"
-        badge_img: ""
+        badge_img: "Image"
+        rule: "Rule"
+        condition: "Condition"
     errors:
       messages:
         blank: 'cant be blank'

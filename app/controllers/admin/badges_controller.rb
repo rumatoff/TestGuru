@@ -1,7 +1,7 @@
 class Admin::BadgesController < Admin::BaseController
   before_action :set_badge, only: [:show, :edit, :update, :destroy]
 
-  def index 
+  def index
     @badges = Badge.all
   end
 
@@ -44,6 +44,6 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def badge_params
-    params.require(:badge).permit(:name, :badge_img)
+    params.require(:badge).permit(:name, :badge_img, :rule, :condition)
   end
 end
