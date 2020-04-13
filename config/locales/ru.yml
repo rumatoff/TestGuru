@@ -336,9 +336,11 @@ ru:
       create:
         hello: "Привет"
   badge:
-    header: "Список бейджев"
+    header: "Список всех бейджев"
     terms: "Условия получения"
     img: "Изображение"
+    my_header: "Мои бейджи"
   action: "Действие"
   empty: "Пусто"
   img: "Изображение"
+  empty_my_badges: "У вас нет бейджев"

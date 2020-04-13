@@ -4,16 +4,34 @@
       h1
         = t('badge.header')
 = render 'shared/errors', resource: @badge
-table.table.table-hover
-  thead.thead-dark
-    th.border-top-0.sort-by-title.pointer scope="col"
-      = t('activerecord.attributes.badge.name')
-    th.border-top-0.text-center scope="col"
-      = t('img')
-  tbody
-    tr
-    - if @badges.present?
-      = render @badges
-    - else
-      p
-        = t('empty')
+- if @badges.present?
+  table.table.table-hover
+    thead.thead-dark
+      th.border-top-0.sort-by-title.pointer scope="col"
+        = t('activerecord.attributes.badge.name')
+      th.border-top-0.text-center scope="col"
+        = t('img')
+    tbody
+      tr
+        = render @badges
+  .col
+    .row.justify-content-start
+      h2
+        = t('badge.my_header')
+  - if @user_badges.present?
+    table.table.table-hover
+      thead.thead-dark
+        th.border-top-0.sort-by-title.pointer scope="col"
+          = t('activerecord.attributes.badge.name')
+        th.border-top-0.text-center scope="col"
+          = t('img')
+      tbody
+        tr
+          = render @user_badges
+  - else
+    p
+      = t('empty_my_badges')
+- else
+  p
+    = t('empty')
+
