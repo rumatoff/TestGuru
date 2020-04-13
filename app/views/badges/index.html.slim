@@ -1,19 +1,19 @@
-h1 Listing badges
-
-table
-  thead
-    tr
-      th
-      th
-      th
-
+.d-flex.flex-row-reverse
+  .col
+    .row.justify-content-start
+      h1
+        = t('badge.header')
+= render 'shared/errors', resource: @badge
+table.table.table-hover
+  thead.thead-dark
+    th.border-top-0.sort-by-title.pointer scope="col"
+      = t('activerecord.attributes.badge.name')
+    th.border-top-0.text-center scope="col"
+      = t('img')
   tbody
-    - @badges.each do |badge|
-      tr
-        td = link_to 'Show', badge
-        td = link_to 'Edit', edit_badge_path(badge)
-        td = link_to 'Destroy', badge, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Badge', new_badge_path
+    tr
+    - if @badges.present?
+      = render @badges
+    - else
+      p
+        = t('empty')
