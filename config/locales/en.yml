@@ -59,6 +59,9 @@ en:
         success: "Badge was successfully saved"
       new:
         header: "New badge"
+    links:
+      tests: "Test managment"
+      badges: "Badges managment"
   layouts:
     header:
       welcome: 'Welcome '

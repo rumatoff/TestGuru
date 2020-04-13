@@ -315,6 +315,9 @@ ru:
         success: "Бейдж успешно сохранен"
       new:
         header: "Создать бейдж"
+    links:
+      tests: "Управление тестами"
+      badges: "Управление бейджами"
   layouts:
     header:
       welcome: "Добро пожаловать "
