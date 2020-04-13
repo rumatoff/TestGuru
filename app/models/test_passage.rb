@@ -30,6 +30,18 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def time_left
+    (time_to_test - Time.current).to_i
+  end
+
+  def time_is_over?
+    time_left.zero?
+  end
+
+  def abort!
+    self.current_question = nil
+  end
+
   private
 
   def set_current_question
@@ -50,5 +62,9 @@ class TestPassage < ApplicationRecord
     else
       test.questions.order(:id).where('id > ?', current_question.id).first
     end
+  end
+
+  def time_to_test
+    created_at + test.timer.minutes
   end
 end
