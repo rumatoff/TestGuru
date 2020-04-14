@@ -10,7 +10,7 @@
         = f.text_field :badge_img, class: 'form-control'
       .form-group
         = f.label :rule
-        = f.select :rule, Badge::RULES.map {|c| [t("badge.rules.#{c}"), c]}, {prompt: true}, class: 'custom-select'
+        = f.select :rule, options_for_select(badge_rules), {prompt: true}, class: 'custom-select'
       .form-group
         = f.label :condition
         = f.text_field :condition, class: 'form-control'

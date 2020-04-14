@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :feedback, only: %i[new create]
-  resources :badges
+  resources :badges, only: %i[index show]
 
   namespace :admin do
     get '/' => 'admin#index'

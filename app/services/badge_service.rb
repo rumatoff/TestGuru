@@ -1,4 +1,6 @@
 class BadgeService
+  RULES = %w[all_in_category first_try_success all_in_level].freeze
+  
   def initialize(test_passage)
     @test_passage = test_passage
     @user = test_passage.user
@@ -14,43 +16,21 @@ class BadgeService
   private
 
   def assign_all_in_category?(category)
-    return unless @test.category.title == category && @test_passage.passed?
+    return unless @test.category.title == category
 
-    # badge = @user.badges.where(condition: category).last
     tests = Test.by_category(category).ids
-
     check(tests, category)
-
-    # if badge.present?
-    #   last_badge = @user.user_badges.where(badge_id: badge.id).last
-    #   attempts = TestPassage.all_attempts(@user.id, tests).after(last_badge.created_at).pluck(:test_id).uniq
-    # else
-    #   attempts = TestPassage.all_attempts(@user.id, tests).pluck(:test_id).uniq
-    # end
-    #
-    # attempts.count == tests.count
   end
 
   def assign_first_try_success?(condition)
-    return unless @test_passage.passed?
-
     @user.tests.where(id: @test.id).count == 1
   end
 
   def assign_all_in_level?(level)
-    return unless @test.level.to_i == level.to_i && @test_passage.passed?
+    return unless @test.level.to_i == level.to_i
 
     tests = Test.by_level(level).ids
     check(tests, level)
-
-    # if badge.present?
-    #   last_badge = @user.user_badges.where(badge_id: badge.id).last
-    #   attempts = TestPassage.all_attempts(@user.id, tests).after(last_badge.created_at).pluck(:test_id).uniq
-    # else
-    #   attempts = TestPassage.all_attempts(@user.id, tests).pluck(:test_id).uniq
-    # end
-    #
-    # attempts.count == tests.count
   end
 
   def check(tests, condition)
@@ -58,9 +38,9 @@ class BadgeService
 
     if badge.present?
       last_badge = @user.user_badges.where(badge_id: badge.id).last
-      attempts = TestPassage.all_attempts(@user.id, tests).after(last_badge.created_at).pluck(:test_id).uniq
+      attempts = TestPassage.all_success_attempts(@user.id, tests).after(last_badge.created_at).pluck(:test_id).uniq
     else
-      attempts = TestPassage.all_attempts(@user.id, tests).pluck(:test_id).uniq
+      attempts = TestPassage.all_success_attempts(@user.id, tests).pluck(:test_id).uniq
     end
 
     attempts.count == tests.count
