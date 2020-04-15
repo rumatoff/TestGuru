@@ -1,0 +1,18 @@
+= render 'shared/errors', resource: @badge
+.row
+  .col
+    = form_with model: [:admin, @badge], local: true, url: path, method: method do |f|
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.label :badge_img
+        = f.text_field :badge_img, class: 'form-control'
+      .form-group
+        = f.label :rule
+        = f.select :rule, options_for_select(badge_rules), {prompt: true}, class: 'custom-select'
+      .form-group
+        = f.label :condition
+        = f.text_field :condition, class: 'form-control'
+      = f.submit t('links.save'), class: 'btn btn-primary btn-lg'
+      = link_to t('links.back'), path, class: 'btn btn-secondary btn-lg mx-2'

@@ -11,6 +11,8 @@ class TestPassagesController < ApplicationController
     @test_passage.abort! if @test_passage.time_is_over?
 
     if @test_passage.completed?
+      assign_badges if @test_passage.passed?
+
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
@@ -34,5 +36,10 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def assign_badges
+    new_badges = BadgeService.new(@test_passage).call
+    current_user.badges << new_badges
   end
 end

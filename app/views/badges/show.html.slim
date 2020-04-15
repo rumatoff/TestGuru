@@ -1,0 +1,22 @@
+.row
+  .col
+    .table-responsive
+      table.table
+        tbody
+          tr.d-flex
+            td.col-lg-12 style='border-top: 0px'
+              h1
+                = @badge.name
+          tr.d-flex
+            td.col-lg-12 style='border-top: 0px;'
+              = image_tag(@badge.badge_img, class: :badge_image_show)
+          tr.d-flex
+            td.col-lg-12 style='border-top: 0px;'
+              | #{t('activerecord.attributes.badge.badge_img')}: #{@badge.badge_img}
+          tr.d-flex
+            td.col-lg-12 style='border-top: 0px;'
+              | #{t('badge.terms')}: 
+              | #{t "badge.rules.#{@badge.rule}"} #{ @badge.condition if @badge.condition.present?}
+          tr.d-flex
+            td.col-lg-6 style='border-top: 0px;'
+              = link_to t('links.home'), badges_path, class: 'btn btn-secondary'

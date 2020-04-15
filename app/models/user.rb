@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :my_tests, foreign_key: 'author_id', class_name: 'Test'
   has_many :gists, dependent: :destroy
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
 
   validates_presence_of :first_name, :last_name
 

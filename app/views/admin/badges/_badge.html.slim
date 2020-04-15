@@ -1,0 +1,9 @@
+tr
+  td.w-50
+    = link_to badge.name, admin_badge_path(badge), class: 'align-baseline test-title'
+  td.w-30
+    = image_tag(badge.badge_img, height: 45, width: 35)
+  td.w-10
+    = link_to t('links.edit'), edit_admin_badge_path(badge),class: 'btn btn-primary float-right'
+  td.w-10
+    = button_to t('links.delete'), admin_badge_path(badge), method: :delete, data: { confirm: t('links.confirm') }, class: 'btn btn-danger float-right'
