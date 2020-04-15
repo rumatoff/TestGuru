@@ -50,6 +50,18 @@ en:
       index:
         header: "Gists list"
         empty: "Gists list empty"
+    badges:
+      edit:
+        header: "Edit badge"
+      destroy:
+        success: "Badge successfully deleted"
+      create:
+        success: "Badge was successfully saved"
+      new:
+        header: "New badge"
+    links:
+      tests: "Test managment"
+      badges: "Badges managment"
   layouts:
     header:
       welcome: 'Welcome '
@@ -66,3 +78,20 @@ en:
   datetime:
     prompts:
       year: "year"
+  users:
+    sessions:
+      create:
+        hello: "Hi"
+  badge:
+    header: "Full badges list"
+    terms: "Terms of receipt"
+    img: "Image"
+    my_header: "My badges"
+    rules:
+      all_in_category: "All in category"
+      first_try_success: "First try success"
+      all_in_level: "All in level"
+  action: "Action"
+  empty: "Empty"
+  img: "Image"
+  empty_my_badges: "You have no badges"

@@ -306,6 +306,18 @@ ru:
       index:
         header: "Список Gists"
         empty: "Пусто"
+    badges:
+      edit:
+        header: "Изменить бейдж"
+      destroy:
+        success: "Бейдж удален"
+      create:
+        success: "Бейдж успешно сохранен"
+      new:
+        header: "Создать бейдж"
+    links:
+      tests: "Управление тестами"
+      badges: "Управление бейджами"
   layouts:
     header:
       welcome: "Добро пожаловать "
@@ -319,3 +331,20 @@ ru:
     gist:
       success: "Gist успешно сохранен!"
       failure: "Во врем сохранения gist произошла ошибка"
+  users:
+    sessions:
+      create:
+        hello: "Привет"
+  badge:
+    header: "Список всех бейджев"
+    terms: "Условия получения"
+    img: "Изображение"
+    my_header: "Мои бейджи"
+    rules:
+      all_in_category: "Все в категории"
+      first_try_success: "С первой попытки"
+      all_in_level: "Все конкретного уровня"
+  action: "Действие"
+  empty: "Пусто"
+  img: "Изображение"
+  empty_my_badges: "У вас нет бейджев"

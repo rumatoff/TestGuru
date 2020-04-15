@@ -5,6 +5,16 @@ class TestPassage < ApplicationRecord
 
   before_validation :set_current_question
 
+  scope :attempts, ->(user_id, test_id) { where(user_id: user_id, test_id: test_id, successfully: true) }
+
+  def self.all_success_attempts(user_id, test_id)
+    attempts(user_id, test_id)
+  end
+
+  def self.after(created_at)
+    where('created_at > ?', created_at)
+  end
+
   def completed?
     current_question.nil?
   end
@@ -19,6 +29,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.successfully = true if passed?
     save!
   end
 

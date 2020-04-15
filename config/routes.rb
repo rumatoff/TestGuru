@@ -17,9 +17,12 @@ Rails.application.routes.draw do
 
   resources :categories
   resources :feedback, only: %i[new create]
+  resources :badges, only: %i[index show]
 
   namespace :admin do
+    get '/' => 'admin#index'
     resources :gists, only: :index
+    resources :badges
     resources :tests do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do

@@ -5,9 +5,11 @@ header
         = link_to 'TestGuru', root_path, class: 'my-0 mr-md-auto font-weight-normal navbar-brand'
         - if current_user.admin?
           nav.my-2.my-md-0.mr-md-3.navbar-nav
-            = link_to t('.admins'), admin_tests_path, class: 'nav-link my-0 mr-3'
+            = link_to t('.admins'), admin_path, class: 'nav-link my-0 mr-3'
           nav.my-2.my-md-0.mr-md-3.navbar-nav
             = link_to 'Gists', admin_gists_path, class: 'nav-link my-0 mr-3'
+        nav.my-2.my-md-0.mr-md-3.navbar-nav
+          = link_to 'Badges', badges_path, class: 'nav-link my-0 mr-3'
         nav.col-lg-6.text-center
           span.navbar-text
             = t('.welcome')
