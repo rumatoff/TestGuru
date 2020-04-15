@@ -8,6 +8,8 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answer_ids])
 
+    @test_passage.abort! if @test_passage.time_is_over?
+
     if @test_passage.completed?
       assign_badges if @test_passage.passed?
 
