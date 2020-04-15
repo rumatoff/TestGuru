@@ -12,10 +12,13 @@
 / .row
 /   .col.text-center
 /     progress value="#{@test_passage.question_number}" max="#{@test_passage.question_count}"
+.row
     
 .row
   .col.text-center
     .progress#bar data-value="#{@test_passage.question_number}" data-max="#{@test_passage.question_count}"
+    - if @test_passage.test.timer?
+      = content_tag :div, nil, class: 'timer', id: 'timer', data: {time: @test_passage.time_left}
 
 .row
   .col.mt-5
@@ -35,4 +38,4 @@
                 td style="border: 0px"
                   = b.label
       = link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-secondary mr-3'
-      = f.submit 'Next', class: 'btn btn-primary'
+      = f.submit 'Next', class: 'btn btn-primary', id: 'next'
