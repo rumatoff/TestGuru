@@ -19,7 +19,7 @@ class BadgeService
     return unless @test.category.title == category
 
     tests = Test.by_category(category).ids
-    check(tests, category)
+    check(tests, 'all_in_category', category)
   end
 
   def assign_first_try_success?(condition)
@@ -30,15 +30,15 @@ class BadgeService
     return unless @test.level.to_i == level.to_i
 
     tests = Test.by_level(level).ids
-    check(tests, level)
+    check(tests, 'all_in_level', level)
   end
 
-  def check(tests, condition)
-    badge = @user.badges.where(condition: condition).last
+  def check(tests, rule, condition)
+    badge = @user.badges.where(rule: rule, condition: condition).last
 
     if badge.present?
-      last_badge = @user.user_badges.where(badge_id: badge.id).last
-      attempts = TestPassage.all_success_attempts(@user.id, tests).after(last_badge.created_at).pluck(:test_id).uniq
+      last_assignment = @user.user_badges.where(badge_id: badge.id).last
+      attempts = TestPassage.all_success_attempts(@user.id, tests).after(last_assignment.created_at).pluck(:test_id).uniq
     else
       attempts = TestPassage.all_success_attempts(@user.id, tests).pluck(:test_id).uniq
     end

@@ -5,6 +5,6 @@ class Badge < ApplicationRecord
 
   validates :name, :badge_img, :rule, presence: true
   validates :rule, uniqueness: { scope: :condition }
-  validates_inclusion_of :rule, in: BadgeService::RULES, on: :create
+  validates_inclusion_of :rule, in: BadgeService::RULES
 
 end
